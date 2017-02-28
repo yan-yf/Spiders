@@ -11,4 +11,12 @@ import scrapy
 class DoubanbookItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    name = scrapy.Field()
+    bookname = scrapy.Field()         #书名
+    author = scrapy.Field()           #作者
+    publisher = scrapy.Field()        #出版社
+    translator = scrapy.Field()       #译者
+    publishyear = scrapy.Field()      #出版年
+    price = scrapy.Field()            #定价
+    stars = scrapy.Field()            #豆瓣评分
+    quote = scrapy.Field()
+    num = scrapy.Field()

@@ -17,7 +17,9 @@ NEWSPIDER_MODULE = 'DoubanBook.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'DoubanBook (+http://www.yourdomain.com)'
+USER_AGENT = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"
 
+COOKIES_ENABLED = False
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 

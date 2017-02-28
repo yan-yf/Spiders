@@ -1,2 +1,2 @@
-# Spider
+# Spiders
 Some spider programs

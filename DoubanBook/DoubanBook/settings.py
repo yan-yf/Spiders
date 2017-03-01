@@ -66,9 +66,16 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'DoubanBook.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   #'DoubanBook.pipelines.SomePipeline': 300,
+   'DoubanBook.pipelines.MongoDBPipeline': 300
+}
+
+# MongoDB configuretion
+MONGODB_SERVER = 'localhost'
+MONGODB_PORT = 27017
+MONGODB_DB = 'douban'
+MONGODB_COLLECTION = 'book'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

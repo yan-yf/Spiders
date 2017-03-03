@@ -18,13 +18,13 @@ class TianyanchaSpider(scrapy.Spider):
 		temp = response.xpath('//div[@class="company_info_text"]')
 		print temp
 		company = TianyanchaItem()
-		company['name'] = response.xpath('//p[@class="in-block ml10 ng-binding"]').extract()[0]
+		company['name'] = temp.xpath('//p[@class="in-block ml10 ng-binding"]').extract()[0]
 		# company['phone'] = re.findall(r^"(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?", str(info[1]))
-		company['phone'] = response.xpath('span[1]/text()').extract()[0]
+		company['phone'] = temp.xpath('span[1]/text()').extract()[0]
 		# company['email'] = re.findall(r^"(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})", str(info[1]))
-		company['email'] = response.xpath('span[2]/text()').extract()[0]
+		company['email'] = temp.xpath('span[2]/text()').extract()[0]
 		# company['http'] = str(info[2])[3:]
-		company['http'] = response.xpath('span[3]/a/@href').extract()[0]
+		company['http'] = temp.xpath('span[3]/a/@href').extract()[0]
 		# company['address'] = str(info[3])[3:]
-		company['address'] = response.xpath('span[4]/text()').extract()[0]
+		company['address'] = temp.xpath('span[4]/text()').extract()[0]
 		yield company
